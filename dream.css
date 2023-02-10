@@ -1,0 +1,99 @@
+@media (color) {
+  ::selection {
+    color: #303;
+    background: turquoise;
+  }
+}
+
+@keyframes absolve {
+  from {
+    color: transparent;
+    background-color: var(--sea-oil, none);
+  }
+  to {
+    color: var(--sea-ink, inherit);
+    background-color: var(--sea-oil, none);
+  }
+}
+
+details {
+  animation: 666ms absolve ease-in;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+summary {
+  text-shadow: 1pt 1pt 1ex coral;
+  cursor: zoom-in;
+  order: 1;
+}
+
+[open] summary {
+  cursor: zoom-out;
+}
+
+.trident::before,
+::marker {
+  content: "\2646";
+}
+
+.trident {
+  text-decoration: dotted overline 1ex;
+}
+
+input {
+  visibility: hidden;
+}
+
+label {
+  border-radius: 1ex;
+  border: .5ex outset;
+}
+
+[value=dissolve]:checked ~ :not(input):not(label) {
+  color: transparent;
+  visibility: hidden;
+}
+
+del {
+  text-decoration: line-through wavy from-font;
+}
+
+html {
+  font-size: max(1em, 3vmax);
+  line-height: 1.618;
+}
+
+body {
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.guide {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+:focus {
+  outline-width: thick;
+  outline-style: dotted;
+  outline-color: currentColor;
+}
+
+[hidden] {
+  display: none;
+}
